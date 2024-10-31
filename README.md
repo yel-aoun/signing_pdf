@@ -75,7 +75,8 @@ To sign a PDF, make a POST request to /pdf/sign with the required parameters.
 Example Request
 Using curl:
 
-**curl -X POST http://localhost:3000/pdf/sign \
+```bash
+curl -X POST http://localhost:3000/pdf/sign \
   -H "Content-Type: application/json" \
   -d '{
         "inputPath": "path/to/input.pdf",
@@ -83,21 +84,26 @@ Using curl:
         "certPath": "path/to/certificate.p12",
         "certPassword": "your_cert_password"
       }'
-**
+```
+
 Expected Response
-**{
+```bash
+
   "message": "PDF signed successfully"
-}
-**
+```
+
 
 List Signed PDFs
 To view all signed PDFs, send a GET request to /pdf/list.
 
 Example Request
-**curl -X GET http://localhost:3000/pdf/list
-**
+```bash
+curl -X GET http://localhost:3000/pdf/list
+```
+
 Example Response
-**[
+```bash
+[
   {
     "id": 1,
     "filename": "output_signed.pdf",
@@ -109,11 +115,12 @@ Example Response
     "created_at": "2024-10-28T14:20:00.000Z"
   }
 ]
-**
+```
 
 Retrieve a Signed PDF
 Retrieve a signed PDF by its id by sending a GET request to /pdf/retrieve/:id.
 
 Example Request
-**curl -X GET http://localhost:3000/pdf/retrieve/1 -o retrieved_signed.pdf
-**
+```bash
+curl -X GET http://localhost:3000/pdf/retrieve/1 -o retrieved_signed.pdf
+```
