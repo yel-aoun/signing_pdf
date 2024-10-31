@@ -83,7 +83,7 @@ curl -X POST http://localhost:3000/pdf/sign \
         "inputPath": "path/to/input.pdf",
         "outputPath": "path/to/output_signed.pdf",
         "certPath": "path/to/certificate.p12",
-        "certPassword": "your_cert_password"
+        "certPassword": "your_cert_password"  // in my case 1234
       }'
 ```
 
