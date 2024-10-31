@@ -1,12 +1,13 @@
 # signing_pdf
 
 # ENV
-
+```bash
 DB_HOST=localhost
 DB_PORT=5432
 DB_USERNAME=pdf_user
 DB_PASSWORD=securepassword
 DB_DATABASE=pdf_signing
+```
 
 
 
